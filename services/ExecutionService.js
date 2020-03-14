@@ -25,11 +25,11 @@ ExecutionService.createExecution = (execution) => {
         var execution = new Execution({
             insertionDate: new Date(),
             timestamp: timestamp,
-            beforeImgUri: `public/images/${timestamp}/T1-before.png`,
-            afterImgUri: `public/images/${timestamp}/T1-after.png`
+            beforeImgUri: `public/images/${timestamp}/Test1-before.png`,
+            afterImgUri: `public/images/${timestamp}/Test1-after.png`
         });
         FileService.cleanScrennshotFolder()
-            .then(() => CypressService.execute('cypress/integration/randomColorTest.js'))
+            .then(() => CypressService.execute('cypress/integration/colorTest.js'))
             .then(() => FileService.copyScreenshotFolder(timestamp))
             .then(() => ResembleService.compare(execution))
             .then(data => execution = data)

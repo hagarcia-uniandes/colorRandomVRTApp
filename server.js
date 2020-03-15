@@ -13,7 +13,7 @@ var Execution = require('./models/Execution');
 
 // configuration =================    
 var mongoUri = process.env.MONGODB_URI || "mongodb://heroku_gd96f7jm:zu6v9PJkFb7m2U!@ds111489.mlab.com:11489/heroku_gd96f7jm";
-console.log('aca');
+
 mongoose.connect(mongoUri, function (err, res) {
     if (err) {
         console.log('ERROR connecting');
@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ 'extended': 'true' }));            // parse appl
 app.use(bodyParser.json());                                     // parse application/json
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
-
+console.log('aca');
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');

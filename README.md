@@ -1,3 +1,2 @@
-# MISO-4208-visualTesting
+# Color Random VRT App
 
-'heroku run bash --app [appName]'

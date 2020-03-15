@@ -36,9 +36,9 @@ app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, access_token');
     next();
 });
-console.log('aca');
+
 var executionRouter = require('./controllers/ExecutionController')(Execution);
-console.log('aca');
+
 app.use('/api/execution', executionRouter);
 
 app.get('*', function (req, res) {

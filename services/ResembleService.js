@@ -9,10 +9,10 @@ ResembleService.compare = (execution) => {
         const options = {};
         resemblejsCompare(execution.beforeImgUri, execution.afterImgUri, options, function (err, data) {
             if (err) reject(err);                                
-            fs.writeFile('public/images/${execution.timestamp}/comparation.png', data.getBuffer(), (err) => {                
+            fs.writeFile(`public/images/${execution.timestamp}/comparation.png`, data.getBuffer(), (err) => {                
                 if (err) reject(err);
                 execution.comparation = data;
-                execution.comparationImgUri = 'public/images/${execution.timestamp}/comparation.png';
+                execution.comparationImgUri = `public/images/${execution.timestamp}/comparation.png`;
                 resolve(execution);
             });
         });

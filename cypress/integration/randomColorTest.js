@@ -2,7 +2,7 @@ describe('Random color palette', () => {
 
   context('Generate Random Colors', () => {
     beforeEach(function () {
-      cy.visit('https://hagarcia-uniandes.github.io/VRT_colorPallete/')
+      cy.visit('https://daprieto1.github.io/MISO-4208-randomColors/')
     })
 
     it('T1: Should generate random color from empty palette', () => {

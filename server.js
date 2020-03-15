@@ -23,7 +23,6 @@ mongoose.connect(mongoUri, function (err, res) {
 })
     .catch(err => console.log(err));
 
-console.log('aca');
 app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
 app.use(morgan('dev'));                                         // log every request to the console
 app.use(bodyParser.urlencoded({ 'extended': 'true' }));            // parse application/x-www-form-urlencoded
@@ -37,7 +36,7 @@ app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, access_token');
     next();
 });
-
+console.log('aca');
 var executionRouter = require('./controllers/ExecutionController')(Execution);
 
 app.use('/api/execution', executionRouter);

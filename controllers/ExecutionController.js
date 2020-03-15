@@ -5,6 +5,7 @@ var express = require('express');
 var ExecutionService = require('./../services/ExecutionService');
 
 var routes = function (Execution) {
+    console.log('aca');
     var executionRouter = express.Router();
 
     executionRouter.route('/')

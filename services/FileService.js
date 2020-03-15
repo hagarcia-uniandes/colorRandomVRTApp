@@ -24,12 +24,9 @@ FileService.copyScreenshotFolder = (timestamp) => {
         console.log(`FileService copyScreenshotFolder start`);
         fs.mkdir(`public/images/${timestamp}`, () => {
             console.log(`FileService copyScreenshotFolder info: folder public/images/${timestamp} created`);
-            fs.createReadStream('cypress/screenshots/T1-before.png').pipe(fs.createWriteStream('public/images/${timestamp}/T1-before.png'));
-            fs.createReadStream('cypress/screenshots/T1-after.png').pipe(fs.createWriteStream('public/images/${timestamp}/T1-after.png'));
-            resolve();
-            /*UtilsService.copyFile('cypress/screenshots/T1-before.png', `public/images/${timestamp}/T1-before.png`)
-                .then(() => UtilsService.copyFile('cypress/screenshots/T1-after.png', `public/images/${timestamp}/T1-after.png`))
-                .then(() => resolve());*/
+            UtilsService.copyFile('./../cypress/screenshots/T1-before.png', `public/images/${timestamp}/T1-before.png`)
+                .then(() => UtilsService.copyFile('./../cypress/screenshots/T1-after.png', `public/images/${timestamp}/T1-after.png`))
+                .then(() => resolve());
         });
     });
 }

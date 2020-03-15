@@ -1,4 +1,4 @@
-Promise = require('promise');
+//Promise = require('promise');
 
 var express = require('express');
 

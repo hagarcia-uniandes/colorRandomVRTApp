@@ -23,7 +23,7 @@ Utils.writeFile = (path, content) => {
 };
 
 Utils.copyFile = (source, target) => {
-    console.log(`UtilsService copyFile start: source = ${source}, target = ${target}`);
+    console.log('UtilsService copyFile start: source = ${source}, target = ${target}');
     return new Promise((resolve, reject) => {
         fs.copyFile(source, target, (err) => {
             if (err) reject(err);
@@ -34,13 +34,13 @@ Utils.copyFile = (source, target) => {
 
 Utils.executeCommand = command => {
     return new Promise((resolve, reject) => {
-        console.log(`UtilsService executeCommand start: command = ${command}`);
+        console.log('UtilsService executeCommand start: command = ${command}');
         nrc.run(command)
             .then(function (exitCodes) {
-                console.log(`UtilsService executeCommand ends: exitCodes = ${exitCodes}`);
+                console.log('UtilsService executeCommand ends: exitCodes = ${exitCodes}');
                 resolve();
             }, function (err) {
-                console.log(`UtilsService executeCommand ends: error = ${err}`);
+                console.log('UtilsService executeCommand ends: error = ${err}');
                 reject(err);
             });
     });

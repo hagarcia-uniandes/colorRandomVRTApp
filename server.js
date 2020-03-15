@@ -13,7 +13,7 @@ var Execution = require('./models/Execution');
 
 // configuration =================    
 var mongoUri = process.env.MONGODB_URI || "mongodb://heroku_gd96f7jm:zu6v9PJkFb7m2U!@ds111489.mlab.com:11489/heroku_gd96f7jm";
-
+console.log('aca');
 mongoose.connect(mongoUri, function (err, res) {
     if (err) {
         console.log('ERROR connecting');

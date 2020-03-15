@@ -21,8 +21,8 @@
   "homepage": "https://github.com/daprieto1/MISO-4208-visualTesting#readme",
   "dependencies": {
     "body-parser": "~1.5.2",
-    "cypress": "^3.8.3",
-    "cypress-cli": "^0.14.0",
+    "cypress": "^2.1.0",
+    "cypress-cli": "^0.19.4",
     "express": "~4.7.2",
     "method-override": "~2.1.2",
     "mongoose": "^5.0.9",

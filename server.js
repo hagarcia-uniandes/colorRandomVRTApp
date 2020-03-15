@@ -42,7 +42,7 @@ var executionRouter = require('./controllers/ExecutionController')(Execution);
 app.use('/api/execution', executionRouter);
 
 app.get('*', function (req, res) {
-    res.sendfile('./piublic/index.html');
+    res.sendfile('./public/index.html');
 });
 
 // listen (start app with node server.js) ======================================
